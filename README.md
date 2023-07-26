@@ -10,9 +10,20 @@ Features (bend-tech.com):
 - `b`: Open the bent tubing menu
 - `Delete`: Key instead of the on screen button
 - `d`: Place a dimension
+- `LWin+b`: Open Bend-Tech or pull the program forward
+
+### davinciResolve.ahk
+Features:
+- `LWin+d`: Open Davinci Resolve or pull the program forward
 
 ## Personal AHK
 ### remap.ahk
 Features (Used for alternative keyboard layouts):
 - `LWin`: Replaces `LWin` with `LAlt`
 - `LAlt`: Replaces `LAlt` with `LWin`
+
+### master.ahk
+Features (Combines multiple softwares and remaps):
+- All bendTech.ahk features
+- All davinciResolve.ahk features
+- All remap.ahk features
