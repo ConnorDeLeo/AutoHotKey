@@ -1,5 +1,18 @@
 ﻿#Requires AutoHotkey v2.0
 
+; Variables
+
+exe := "ahk_exe "
+
+; Remaps
+
+LWin::LAlt
+LAlt::LWin
+
+; General Programs 
+
+#HotIf
+
 ; Bend-Tech
 ; Bend-Tech path: "ahk_exe C:\2020SSI\Bend-Tech 7x\Bend-Tech.exe"
 
@@ -47,10 +60,25 @@ bendTech := "ahk_exe C:\2020SSI\Bend-Tech 7x\Bend-Tech.exe"
 
 #HotIf Not WinExist(bendTech)
 {
-    LWin & b::Run(LTrim(bendTech, exe))
+    LAlt & b::Run(LTrim(bendTech, exe))
 }
 
 #HotIf WinExist(bendTech)
 {
-    LWin & b::WinActivate(bendTech)
+    LAlt & b::WinActivate(bendTech)
+}
+
+; DaVinci Resolve
+; Davinci Resolve path: "ahk_exe C:\Program Files\Blackmagic Design\DaVinci Resolve\Resolve.exe"
+
+davinci := "ahk_exe C:\Program Files\Blackmagic Design\DaVinci Resolve\Resolve.exe"
+
+#HotIf Not WinExist(davinci)
+{
+    LAlt & d::Run(LTrim(davinci, exe))
+}
+
+#HotIf WinExist(davinci)
+{
+    LAlt & d::WinActivate(davinci)
 }
