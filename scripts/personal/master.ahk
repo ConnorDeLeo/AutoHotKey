@@ -73,6 +73,16 @@ bendTech := "C:\2020SSI\Bend-Tech 7x\Bend-Tech.exe"
 
 davinci := "C:\Program Files\Blackmagic Design\DaVinci Resolve\Resolve.exe"
 
+#HotIf WinActive(exe davinci)
+{
+    ^+c::cut("^+c")
+
+    cut(key)
+    {
+        MouseGetPos(&xpos, &ypos) MouseMove(670, 950) Sleep(5) MouseClick("left") Sleep(5) MouseMove(85, 510) Sleep(5) MouseClick("left") Sleep(5) MouseMove(670, 950) Sleep(5) MouseClick("left") Sleep(5) MouseMove(xpos, ypos)
+    }
+}
+
 #HotIf Not WinExist(exe davinci)
 {
     LAlt & d::Run(davinci)
@@ -84,7 +94,7 @@ davinci := "C:\Program Files\Blackmagic Design\DaVinci Resolve\Resolve.exe"
 }
 
 ; SpeedCrunch
-; SpeedCrunch path: "CC:\Program Files (x86)\SpeedCrunch\speedcrunch.exe"
+; SpeedCrunch path: "C:\Program Files (x86)\SpeedCrunch\speedcrunch.exe"
 
 speedCrunch := "C:\Program Files (x86)\SpeedCrunch\speedcrunch.exe"
 
