@@ -4,6 +4,8 @@
 
 exe := "ahk_exe "
 
+cmd := "C:\Windows\system32\cmd.exe /c"
+
 ; Remaps
 
 LWin::LAlt
@@ -106,4 +108,20 @@ speedCrunch := "C:\Program Files (x86)\SpeedCrunch\speedcrunch.exe"
 #HotIf WinExist(exe speedCrunch)
 {
     F16::WinActivate(exe speedCrunch)
+}
+
+; File Explorer
+; File Explorer path: "D:\"
+
+fileX := "New Volume (D:)"
+fileXArg := "Explorer D:\"
+
+#HotIf Not WinExist(fileX)
+{
+    LAlt & f::RunWait(cmd fileXArg)
+}
+
+#HotIf WinExist(fileX)
+{
+    LAlt & f::WinActivate(fileX)
 }
