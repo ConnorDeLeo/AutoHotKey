@@ -7,6 +7,16 @@ exe := "ahk_exe "
 
 audacity := "C:\Program Files\Audacity\Audacity.exe"
 
+#HotIf WinActive(exe audacity)
+{
+    LWin & n::openAI("LWin & n")
+
+    openAI(key)
+    {
+        Run("https://audo.ai/noise-removal")
+    }
+}
+
 #HotIf not WinExist(exe audacity)
 {
     LWin & a::Run(audacity)
@@ -15,12 +25,4 @@ audacity := "C:\Program Files\Audacity\Audacity.exe"
 #HotIf WinExist(exe audacity)
 {
     LWin & a::WinActivate(exe audacity)
-
-    LWin & f::openAI(#f)
-
-    openAI(key)
-    {
-        Run("https://audo.ai/noise-removal")
-        WinActivate
-    }
 }

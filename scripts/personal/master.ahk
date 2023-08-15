@@ -125,3 +125,28 @@ fileXArg := "Explorer D:\"
 {
     LAlt & f::WinActivate(fileX)
 }
+
+; Audacity
+; Audacity path: "C:\Program Files\Audacity\Audacity.exe"
+
+audacity := "C:\Program Files\Audacity\Audacity.exe"
+
+#HotIf WinActive(exe audacity)
+{
+    LAlt & n::openAI("LAlt & n")
+
+    openAI(key)
+    {
+        Run("https://audo.ai/noise-removal")
+    }
+}
+
+#HotIf not WinExist(exe audacity)
+{
+    LAlt & a::Run(audacity)
+}
+
+#HotIf WinExist(exe audacity)
+{
+    LAlt & a::WinActivate(exe audacity)
+}

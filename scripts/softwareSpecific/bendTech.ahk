@@ -11,10 +11,10 @@ bendTech := "C:\2020SSI\Bend-Tech 7x\Bend-Tech.exe"
 {
     ^+s::saveAs("^+s")
     ^+z::redo("^+z")
-    l::straight("l")
-    b::bent("b")
-    Delete::delete("Delete")
-    d::dimension("d")
+    ^l::straight("l")
+    ^b::bent("b")
+    ^Delete::delete("Delete")
+    ^d::dimension("d")
 
     saveAs(key)
     {
