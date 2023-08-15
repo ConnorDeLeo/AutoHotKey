@@ -81,7 +81,7 @@ davinci := "C:\Program Files\Blackmagic Design\DaVinci Resolve\Resolve.exe"
 
     cut(key)
     {
-        MouseGetPos(&xpos, &ypos) MouseMove(670, 950) Sleep(5) MouseClick("left") Sleep(5) MouseMove(85, 510) Sleep(5) MouseClick("left") Sleep(5) MouseMove(670, 950) Sleep(5) MouseClick("left") Sleep(5) MouseMove(xpos, ypos)
+        MouseGetPos(&xpos, &ypos) MouseMove(670, 950) Sleep(5) MouseClick("left") Sleep(5) MouseMove(85, 530) Sleep(5) MouseClick("left") Sleep(5) MouseMove(670, 950) Sleep(5) MouseClick("left") Sleep(5) MouseMove(xpos, ypos)
     }
 }
 
